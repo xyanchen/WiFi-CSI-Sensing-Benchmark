@@ -1,7 +1,7 @@
 # Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial
 ## Introduction
 WiFi sensing has been evolving rapidly in recent years. Empowered by propagation models and deep learning methods, many challenging applications are realized such as WiFi-based human activity recognition and gesture recognition. However, in contrast to deep learning for visual recognition and natural language processing, no sufficiently comprehensive public benchmark exists. In this paper, we highlight the recent progress on deep learning enabled WiFi sensing, and then propose a benchmark, SenseFi, to study various deep learning models for WiFi sensing. These advanced models are compared in terms of different tasks, WiFi platforms, recognition accuracy, model size, computational complexity, feature transferability, and adaptability of unsupervised learning. The extensive experiments provide us with experiences on deep model design, learning strategy skills and training techniques for real-world applications. To the best of our knowledge, this is the first benchmark with an open-source library for deep learning in WiFi sensing research.
-![framework](Models.jpg)
+![framework](./img/Models.jpg)
 ## Requirements
 
 ```
@@ -109,7 +109,7 @@ You can choose [model name] from the model list below
 - ***class*** **PatchEmbedding** : Divide the 2D inputs into small pieces of equal size. Then concatenate each piece with cls_token and do positional encoding operation
 - ***class*** **ClassificationHead** : It consists of a layer-normalization layer followed by a fully-connected layer
 - ***class*** **TransformerEncoderBlock** : It consists of multi-head attention block, residual add block and feed forward block. The structure is shown below:  
-<img src="transformer_block.jpg" width="200"/>
+<img src="./img/transformer_block.jpg" width="200"/>
 
 ## Dataset
 #### UT-HAR
@@ -134,7 +134,7 @@ You can choose [model name] from the model list below
 - **test number** : 294  
 
 *Examples of NTU-Fi data*  
-<img src="CSI_samples.jpg" width="1000"/>
+<img src="./img/CSI_samples.jpg" width="1000"/>
 
 
 #### Widar
@@ -148,6 +148,6 @@ Draw-2, Draw-3, Draw-4, Draw-5, Draw-6, Draw-7, Draw-8, Draw-9, Draw-10
 - **test number** : 8726  
 
 *Classes of Widar data*  
-<img src="Widar_classes.jpg" width="800"/>  
+<img src="./img/Widar_classes.jpg" width="800"/>  
 [*Widar3.0: Zero-Effort Cross-Domain Gesture Recognition with Wi-Fi*](https://ieeexplore.ieee.org/document/9516988) [[Project]](http://tns.thss.tsinghua.edu.cn/widar3.0/)
 ## Reference
