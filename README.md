@@ -4,6 +4,8 @@ WiFi sensing has been evolving rapidly in recent years. Empowered by propagation
 ![framework](./img/Models.jpg)
 ## Requirements
 
+1. Install `pytorch` and `torchvision` (we use `pytorch==1.10.2` and `torchvision==0.11.3`).
+2. `pip install -r requirements.txt`
 ```
 python - 3.9.7
 scipy - 1.7.3
