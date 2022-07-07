@@ -6,14 +6,6 @@ WiFi sensing has been evolving rapidly in recent years. Empowered by propagation
 
 1. Install `pytorch` and `torchvision` (we use `pytorch==1.10.2` and `torchvision==0.11.3`).
 2. `pip install -r requirements.txt`
-```
-python - 3.9.7
-scipy - 1.7.3
-numpy - 1.21.5
-torchvision - 0.11.3
-pytorch - 1.10.2
-einops - 0.4.0
-```
 
 ## Run
 ### Download Processed Data
