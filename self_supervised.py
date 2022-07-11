@@ -110,15 +110,15 @@ def main():
     parser.add_argument('--max2', type=float, default=0.4, metavar='LR')
     parser.add_argument('--gpu', type=int, default=1, metavar='gpu')
     parser.add_argument('--eval', type=str, default='no', metavar='gpu')
-    parser.add_argument('--model', choices = ['MLP','LeNet','ResNet18','ResNet50','ResNet101','RNN','GRU','LSTM','CNN+GRU','ViT'])
+    parser.add_argument('--model', choices = ['MLP','LeNet','ResNet18','ResNet50','ResNet101','RNN','GRU','LSTM','BiLSTM','CNN+GRU','ViT'])
     args = parser.parse_args()
     args.global_crops_scale = (args.min1, args.max1)
     args.local_crops_scale = (args.min2, args.max2)
 
     criterion = EntLoss(args, 0.0, 0.5)
 
-
-    unsupervised_train_loader, supervised_train_loader, test_dataloader, model = load_unsupervised_data_n_model(args.model)
+    root = "./Data/"
+    unsupervised_train_loader, supervised_train_loader, test_dataloader, model = load_unsupervised_data_n_model(args.model,root)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")   
     model.to(device)
     #######################################

@@ -234,6 +234,13 @@ class Widar_CNN_GRU(nn.Module):
             nn.ReLU(),
             nn.MaxPool2d(2)
         )
+        self.fc = nn.Sequential(
+            nn.Linear(16*3*3,64),
+            nn.ReLU(),
+            nn.Dropout(p=0.5),
+            nn.Linear(64,64),
+            nn.ReLU(),
+        )
         self.gru = nn.GRU(64,128,num_layers=1)
         self.classifier = nn.Sequential(
             nn.Dropout(0.5),

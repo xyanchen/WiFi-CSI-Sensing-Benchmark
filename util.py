@@ -216,13 +216,13 @@ def load_data_n_model(dataset_name, model_name, root):
         return train_loader, test_loader, model, train_epoch
 
 
-def load_unsupervised_data_n_model(model_name):
-    HAR_train_dataset=CSI_Dataset('NTU-Fi_HAR/train_amp/')
-    HAR_test_dataset=CSI_Dataset('NTU-Fi_HAR/test_amp/')
+def load_unsupervised_data_n_model(model_name,root):
+    HAR_train_dataset=CSI_Dataset(root+'NTU-Fi_HAR/train_amp/')
+    HAR_test_dataset=CSI_Dataset(root+'NTU-Fi_HAR/test_amp/')
     unsupervised_train_dataset = torch.utils.data.ConcatDataset([HAR_train_dataset,HAR_test_dataset])
     unsupervised_train_loader = torch.utils.data.DataLoader(dataset=unsupervised_train_dataset, batch_size=64, shuffle=True)
-    supervised_train_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset('NTU-Fi-HumanID/test_amp/'), batch_size=64, shuffle=True)
-    test_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset('NTU-Fi-HumanID/train_amp/'), batch_size=64, shuffle=False)
+    supervised_train_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root+'NTU-Fi-HumanID/test_amp/'), batch_size=64, shuffle=True)
+    test_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root+'NTU-Fi-HumanID/train_amp/'), batch_size=64, shuffle=False)
     if model_name == 'MLP':
         print("using model: MLP_Parrallel")
         model = MLP_Parrallel()
