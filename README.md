@@ -1,6 +1,10 @@
-# Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial
+# SenseFi: A Benchmark for WiFi CSI Sensing
 ## Introduction
-WiFi sensing has been evolving rapidly in recent years. Empowered by propagation models and deep learning methods, many challenging applications are realized such as WiFi-based human activity recognition and gesture recognition. However, in contrast to deep learning for visual recognition and natural language processing, no sufficiently comprehensive public benchmark exists. In this paper, we highlight the recent progress on deep learning enabled WiFi sensing, and then propose a benchmark, SenseFi, to study various deep learning models for WiFi sensing. These advanced models are compared in terms of different tasks, WiFi platforms, recognition accuracy, model size, computational complexity, feature transferability, and adaptability of unsupervised learning. The extensive experiments provide us with experiences on deep model design, learning strategy skills and training techniques for real-world applications. To the best of our knowledge, this is the first benchmark with an open-source library for deep learning in WiFi sensing research.
+SenseFi is the first open-source benchmark and library for WiFi CSI human sensing, implemented by PyTorch. The state-of-the-art networks, including MLP, CNN, RNN, Transformers, etc, are evaluated on four public datasets across different WiFi CSI platforms. The details are illustrated in our paper [*Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial*]().
+
+```
+(wait for Arxiv)
+```
 
 ## Requirements
 
@@ -121,12 +125,15 @@ You can choose [model name] from the model list below
 - **classes** : box, circle, clean, fall, run, walk
 - **train number** : 936
 - **test number** : 264
+[*Efficientfi: Towards Large-Scale Lightweight Wifi Sensing via CSI Compression*](https://arxiv.org/pdf/2204.04138)
+
 #### NTU-HumanID
 - **size** : 3 x 114 x 500
 - **number of classes** : 14
 - **classes** : gaits of 14 subjects
 - **train number** : 546
 - **test number** : 294  
+[*CAUTION: A Robust WiFi-based Human Authentication System via Few-shot Open-set Gait Recognition*](https://ieeexplore.ieee.org/abstract/document/9726794)
 
 *Examples of NTU-Fi data*  
 <img src="./img/CSI_samples.jpg" width="1000"/>
@@ -145,4 +152,8 @@ Draw-2, Draw-3, Draw-4, Draw-5, Draw-6, Draw-7, Draw-8, Draw-9, Draw-10
 *Classes of Widar data*  
 <img src="./img/Widar_classes.jpg" width="800"/>  
 [*Widar3.0: Zero-Effort Cross-Domain Gesture Recognition with Wi-Fi*](https://ieeexplore.ieee.org/document/9516988) [[Project]](http://tns.thss.tsinghua.edu.cn/widar3.0/)
-## Reference
+
+## Datasets Reference
+```
+(wait for Arxiv)
+```
