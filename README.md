@@ -125,7 +125,7 @@ You can choose [model name] from the model list below
 - **classes** : box, circle, clean, fall, run, walk
 - **train number** : 936
 - **test number** : 264  
-[*Efficientfi: Towards Large-Scale Lightweight Wifi Sensing via CSI Compression*](https://arxiv.org/pdf/2204.04138)
+[*Efficientfi: Towards Large-Scale Lightweight Wifi Sensing via CSI Compression*](https://arxiv.org/abs/2204.04138)
 
 #### NTU-HumanID
 - **size** : 3 x 114 x 500
@@ -157,5 +157,6 @@ Draw-2, Draw-3, Draw-4, Draw-5, Draw-6, Draw-7, Draw-8, Draw-9, Draw-10
 ```
 @ARTICLE{8067693,  author={Yousefi, Siamak and Narui, Hirokazu and Dayal, Sankalp and Ermon, Stefano and Valaee, Shahrokh},  journal={IEEE Communications Magazine},   title={A Survey on Behavior Recognition Using WiFi Channel State Information},   year={2017},  volume={55},  number={10},  pages={98-104},  doi={10.1109/MCOM.2017.1700082}}  
 @ARTICLE{9667414,  author={Yang, Jianfei and Chen, Xinyan and Zou, Han and Wang, Dazhuo and Xu, Qianwen and Xie, Lihua},  journal={IEEE Internet of Things Journal},   title={EfficientFi: Towards Large-Scale Lightweight WiFi Sensing via CSI Compression},   year={2021},  volume={},  number={},  pages={1-1},  doi={10.1109/JIOT.2021.3139958}}  
-
+@ARTICLE{9726794,  author={Wang, Dazhuo and Yang, Jianfei and Cui, Wei and Xie, Lihua and Sun, Sumei},  journal={IEEE Internet of Things Journal},   title={CAUTION: A Robust WiFi-based Human Authentication System via Few-shot Open-set Gait Recognition},   year={2022},  volume={},  number={},  pages={1-1},  doi={10.1109/JIOT.2022.3156099}}  
+@ARTICLE{9516988,  author={Zhang, Yi and Zheng, Yue and Qian, Kun and Zhang, Guidong and Liu, Yunhao and Wu, Chenshu and Yang, Zheng},  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},   title={Widar3.0: Zero-Effort Cross-Domain Gesture Recognition with Wi-Fi},   year={2021},  volume={},  number={},  pages={1-1},  doi={10.1109/TPAMI.2021.3105387}}  
 ```
