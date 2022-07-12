@@ -124,7 +124,7 @@ You can choose [model name] from the model list below
 - **number of classes** : 6
 - **classes** : box, circle, clean, fall, run, walk
 - **train number** : 936
-- **test number** : 264
+- **test number** : 264  
 [*Efficientfi: Towards Large-Scale Lightweight Wifi Sensing via CSI Compression*](https://arxiv.org/pdf/2204.04138)
 
 #### NTU-HumanID
@@ -155,5 +155,6 @@ Draw-2, Draw-3, Draw-4, Draw-5, Draw-6, Draw-7, Draw-8, Draw-9, Draw-10
 
 ## Datasets Reference
 ```
-(wait for Arxiv)
+@ARTICLE{8067693,  author={Yousefi, Siamak and Narui, Hirokazu and Dayal, Sankalp and Ermon, Stefano and Valaee, Shahrokh},  journal={IEEE Communications Magazine},   title={A Survey on Behavior Recognition Using WiFi Channel State Information},   year={2017},  volume={55},  number={10},  pages={98-104},  doi={10.1109/MCOM.2017.1700082}}  
+
 ```
