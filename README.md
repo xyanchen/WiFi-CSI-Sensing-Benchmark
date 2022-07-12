@@ -160,42 +160,38 @@ Draw-2, Draw-3, Draw-4, Draw-5, Draw-6, Draw-7, Draw-8, Draw-9, Draw-10
 
 ## Datasets Reference
 ```
-@ARTICLE{8067693,  
-author={Yousefi, Siamak and Narui, Hirokazu and Dayal, Sankalp and Ermon, Stefano and Valaee, Shahrokh},  
-journal={IEEE Communications Magazine},   title={A Survey on Behavior Recognition Using WiFi Channel State Information},   
-year={2017},  
-volume={55},  
-number={10},  
-pages={98-104},  
-doi={10.1109/MCOM.2017.1700082}}  
+@article{yousefi2017survey,
+  title={A survey on behavior recognition using WiFi channel state information},
+  author={Yousefi, Siamak and Narui, Hirokazu and Dayal, Sankalp and Ermon, Stefano and Valaee, Shahrokh},
+  journal={IEEE Communications Magazine},
+  volume={55},
+  number={10},
+  pages={98--104},
+  year={2017},
+  publisher={IEEE}
+}
 
-@ARTICLE{9667414,  
-author={Yang, Jianfei and Chen, Xinyan and Zou, Han and Wang, Dazhuo and Xu, Qianwen and Xie, Lihua},  
-journal={IEEE Internet of Things Journal},   
-title={EfficientFi: Towards Large-Scale Lightweight WiFi Sensing via CSI Compression},   
-year={2021},  
-volume={},  
-number={},  
-pages={1-1},  
-doi={10.1109/JIOT.2021.3139958}}  
+@article{yang2022efficientfi,
+  title={Efficientfi: Towards large-scale lightweight wifi sensing via csi compression},
+  author={Yang, Jianfei and Chen, Xinyan and Zou, Han and Wang, Dazhuo and Xu, Qianwen and Xie, Lihua},
+  journal={IEEE Internet of Things Journal},
+  year={2022},
+  publisher={IEEE}
+}
 
-@ARTICLE{9726794,  
-author={Wang, Dazhuo and Yang, Jianfei and Cui, Wei and Xie, Lihua and Sun, Sumei},  
-journal={IEEE Internet of Things Journal},   
-title={CAUTION: A Robust WiFi-based Human Authentication System via Few-shot Open-set Gait Recognition},   
-year={2022},  
-volume={},  
-number={},  
-pages={1-1},  
-doi={10.1109/JIOT.2022.3156099}}  
+@article{wang2022caution,
+  title={CAUTION: A Robust WiFi-based Human Authentication System via Few-shot Open-set Gait Recognition},
+  author={Wang, Dazhuo and Yang, Jianfei and Cui, Wei and Xie, Lihua and Sun, Sumei},
+  journal={IEEE Internet of Things Journal},
+  year={2022},
+  publisher={IEEE}
+}
 
-@ARTICLE{9516988,  
-author={Zhang, Yi and Zheng, Yue and Qian, Kun and Zhang, Guidong and Liu, Yunhao and Wu, Chenshu and Yang, Zheng},  
-journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},   
-title={Widar3.0: Zero-Effort Cross-Domain Gesture Recognition with Wi-Fi},   
-year={2021},  
-volume={},  
-number={},  
-pages={1-1},  
-doi={10.1109/TPAMI.2021.3105387}}  
+@article{zhang2021widar3,
+  title={Widar3. 0: Zero-effort cross-domain gesture recognition with wi-fi},
+  author={Zhang, Yi and Zheng, Yue and Qian, Kun and Zhang, Guidong and Liu, Yunhao and Wu, Chenshu and Yang, Zheng},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2021},
+  publisher={IEEE}
+} 
 ```
