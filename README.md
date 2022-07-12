@@ -1,3 +1,7 @@
+[![GitHub](https://img.shields.io/github/license/Marsrocky/Awesome-WiFi-CSI-Sensing?color=blue)](https://github.com/Marsrocky/Awesome-WiFi-CSI-Sensing/blob/main/LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-YES-green.svg)](https://github.com/Marsrocky/Awesome-WiFi-CSI-Sensing/graphs/commit-activity)
+![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
+
 # SenseFi: A Benchmark for WiFi CSI Sensing
 ## Introduction
 SenseFi is the first open-source benchmark and library for WiFi CSI human sensing, implemented by PyTorch. The state-of-the-art networks, including MLP, CNN, RNN, Transformers, etc, are evaluated on four public datasets across different WiFi CSI platforms. The details are illustrated in our paper [*Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial*]().
@@ -55,8 +59,8 @@ You can choose [dataset name] from the dataset list below
 - Widar
 
 *Example: `python run.py --model ResNet18 --dataset NTU-Fi_HAR`*
-### Self-supervised Learning
-To run models with self-supervised learning (train & test):  
+### Unsupervised Learning
+To run models with unsupervised (self-supervised) learning (train on **NTU-Fi HAR** & test on **NTU-Fi HumanID**):  
 Run: `python self_supervised.py --model [model name] ` 
 
 You can choose [model name] from the model list below
@@ -112,35 +116,36 @@ You can choose [model name] from the model list below
 
 ## Dataset
 #### UT-HAR
-- **size** : 1 x 250 x 90
+[*A Survey on Behavior Recognition Using WiFi Channel State Information*](https://ieeexplore.ieee.org/document/8067693) [[Github]](https://github.com/ermongroup/Wifi_Activity_Recognition)  
+- **CSI size** : 1 x 250 x 90
 - **number of classes** : 7
 - **classes** : lie down, fall, walk, pickup, run, sit down, stand up
 - **train number** : 3977
 - **test number** : 996  
-[*A Survey on Behavior Recognition Using WiFi Channel State Information*](https://ieeexplore.ieee.org/document/8067693) [[Github]](https://github.com/ermongroup/Wifi_Activity_Recognition)
 
 #### NTU-HAR
-- **size** : 3 x 114 x 500
+[*Efficientfi: Towards Large-Scale Lightweight Wifi Sensing via CSI Compression*](https://arxiv.org/abs/2204.04138)  
+- **CSI size** : 3 x 114 x 500
 - **number of classes** : 6
 - **classes** : box, circle, clean, fall, run, walk
 - **train number** : 936
 - **test number** : 264  
-[*Efficientfi: Towards Large-Scale Lightweight Wifi Sensing via CSI Compression*](https://arxiv.org/abs/2204.04138)
 
 #### NTU-HumanID
-- **size** : 3 x 114 x 500
+[*CAUTION: A Robust WiFi-based Human Authentication System via Few-shot Open-set Gait Recognition*](https://ieeexplore.ieee.org/abstract/document/9726794)  
+- **CSI size** : 3 x 114 x 500
 - **number of classes** : 14
 - **classes** : gaits of 14 subjects
 - **train number** : 546
 - **test number** : 294  
-[*CAUTION: A Robust WiFi-based Human Authentication System via Few-shot Open-set Gait Recognition*](https://ieeexplore.ieee.org/abstract/document/9726794)
 
 *Examples of NTU-Fi data*  
 <img src="./img/CSI_samples.jpg" width="1000"/>
 
 
 #### Widar
-- **size** : 22 x 20 x 20
+[*Widar3.0: Zero-Effort Cross-Domain Gesture Recognition with Wi-Fi*](https://ieeexplore.ieee.org/document/9516988) [[Project]](http://tns.thss.tsinghua.edu.cn/widar3.0/)  
+- **BVP size** : 22 x 20 x 20
 - **number of classes** : 22
 - **classes** :  
 Push&Pull, Sweep, Clap, Slide, Draw-N(H), Draw-O(H),Draw-Rectangle(H),  
@@ -151,7 +156,7 @@ Draw-2, Draw-3, Draw-4, Draw-5, Draw-6, Draw-7, Draw-8, Draw-9, Draw-10
 
 *Classes of Widar data*  
 <img src="./img/Widar_classes.jpg" width="800"/>  
-[*Widar3.0: Zero-Effort Cross-Domain Gesture Recognition with Wi-Fi*](https://ieeexplore.ieee.org/document/9516988) [[Project]](http://tns.thss.tsinghua.edu.cn/widar3.0/)
+
 
 ## Datasets Reference
 ```
