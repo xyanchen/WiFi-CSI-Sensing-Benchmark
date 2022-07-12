@@ -105,7 +105,6 @@ You can choose [model name] from the model list below
 - ***class*** **TransformerEncoderBlock** : It consists of multi-head attention block, residual add block and feed forward block. The structure is shown below:  
 <img src="./img/transformer_block.jpg" width="200"/>
 
-![framework](./img/Models.jpg)
 
 ## Dataset
 #### UT-HAR
