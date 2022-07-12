@@ -124,7 +124,7 @@ You can choose [model name] from the model list below
 - **test number** : 996  
 
 #### NTU-HAR
-[*Efficientfi: Towards Large-Scale Lightweight Wifi Sensing via CSI Compression*](https://arxiv.org/abs/2204.04138)  
+[*Efficientfi: Towards Large-Scale Lightweight Wifi Sensing via CSI Compression*](https://ieeexplore.ieee.org/document/9667414)  
 - **CSI size** : 3 x 114 x 500
 - **number of classes** : 6
 - **classes** : box, circle, clean, fall, run, walk
