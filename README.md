@@ -77,7 +77,7 @@ You can choose [model name] from the model list below
 - ViT
 
 *Example: `python self_supervised.py --model MLP`*  
-[*AutoFi: Towards Automatic WiFi Human Sensing via Geometric Self-Supervised Learning*](https://doi.org/10.48550/arXiv.2205.01629)  
+Method: [*AutoFi: Towards Automatic WiFi Human Sensing via Geometric Self-Supervised Learning*](https://doi.org/10.48550/arXiv.2205.01629)  
 
 
 ## Model
