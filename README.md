@@ -217,7 +217,8 @@ Draw-2, Draw-3, Draw-4, Draw-5, Draw-6, Draw-7, Draw-8, Draw-9, Draw-10
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
   year={2021},
   publisher={IEEE}
-} 
+}  
+
 @article{yang2022autofi,
   title={AutoFi: Towards Automatic WiFi Human Sensing via Geometric Self-Supervised Learning},
   author={Yang, Jianfei and Chen, Xinyan and Zou, Han and Wang, Dazhuo and Xie, Lihua},
