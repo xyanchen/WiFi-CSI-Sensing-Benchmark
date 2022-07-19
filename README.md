@@ -7,26 +7,7 @@
 SenseFi is the first open-source benchmark and library for WiFi CSI human sensing, implemented by PyTorch. The state-of-the-art networks, including MLP, CNN, RNN, Transformers, etc, are evaluated on four public datasets across different WiFi CSI platforms. The details are illustrated in our paper [*Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial*](https://arxiv.org/abs/2207.07859).
 
 ```
-@misc{https://doi.org/10.48550/arxiv.2207.07859,
-  doi = {10.48550/ARXIV.2207.07859},
-  
-  url = {https://arxiv.org/abs/2207.07859},
-  
-  author = {Yang, Jianfei and Chen, Xinyan and Wang, Dazhuo and Zou, Han and Lu, Chris Xiaoxuan and Sun, Sumei and Xie, Lihua},
-  
-  keywords = {Machine Learning (cs.LG), Artificial Intelligence (cs.AI), Signal Processing (eess.SP), FOS: Computer and information sciences, FOS: Computer and information sciences, FOS: Electrical engineering, electronic engineering, information engineering, FOS: Electrical engineering, electronic engineering, information engineering},
-  
-  title = {Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial},
-  
-  publisher = {arXiv},
-  
-  year = {2022},
-  
-  copyright = {arXiv.org perpetual, non-exclusive license}
-}
-
-
-@article{yang2022,
+@article{yang2022benchmark,
   title={Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial},
   author={Yang, Jianfei and Chen, Xinyan and Wang, Dazhuo and Zou, Han and Lu, Chris Xiaoxuan and Sun, Sumei and Xie, Lihua},
   journal={arXiv preprint arXiv:2207.07859},
@@ -195,6 +176,13 @@ Draw-2, Draw-3, Draw-4, Draw-5, Draw-6, Draw-7, Draw-8, Draw-9, Draw-10
   publisher={IEEE}
 }
 
+@article{yang2022autofi,
+  title={AutoFi: Towards Automatic WiFi Human Sensing via Geometric Self-Supervised Learning},
+  author={Yang, Jianfei and Chen, Xinyan and Zou, Han and Wang, Dazhuo and Xie, Lihua},
+  journal={arXiv preprint arXiv:2205.01629},
+  year={2022}
+}
+
 @article{yang2022efficientfi,
   title={Efficientfi: Towards large-scale lightweight wifi sensing via csi compression},
   author={Yang, Jianfei and Chen, Xinyan and Zou, Han and Wang, Dazhuo and Xu, Qianwen and Xie, Lihua},
@@ -218,11 +206,4 @@ Draw-2, Draw-3, Draw-4, Draw-5, Draw-6, Draw-7, Draw-8, Draw-9, Draw-10
   year={2021},
   publisher={IEEE}
 }  
-
-@article{yang2022autofi,
-  title={AutoFi: Towards Automatic WiFi Human Sensing via Geometric Self-Supervised Learning},
-  author={Yang, Jianfei and Chen, Xinyan and Zou, Han and Wang, Dazhuo and Xie, Lihua},
-  journal={arXiv preprint arXiv:2205.01629},
-  year={2022}
-}
 ```
