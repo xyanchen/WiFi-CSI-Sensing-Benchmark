@@ -4,10 +4,34 @@
 
 # SenseFi: A Benchmark for WiFi CSI Sensing
 ## Introduction
-SenseFi is the first open-source benchmark and library for WiFi CSI human sensing, implemented by PyTorch. The state-of-the-art networks, including MLP, CNN, RNN, Transformers, etc, are evaluated on four public datasets across different WiFi CSI platforms. The details are illustrated in our paper [*Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial*]().
+SenseFi is the first open-source benchmark and library for WiFi CSI human sensing, implemented by PyTorch. The state-of-the-art networks, including MLP, CNN, RNN, Transformers, etc, are evaluated on four public datasets across different WiFi CSI platforms. The details are illustrated in our paper [*Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial*](https://arxiv.org/abs/2207.07859).
 
 ```
-(wait for Arxiv)
+@misc{https://doi.org/10.48550/arxiv.2207.07859,
+  doi = {10.48550/ARXIV.2207.07859},
+  
+  url = {https://arxiv.org/abs/2207.07859},
+  
+  author = {Yang, Jianfei and Chen, Xinyan and Wang, Dazhuo and Zou, Han and Lu, Chris Xiaoxuan and Sun, Sumei and Xie, Lihua},
+  
+  keywords = {Machine Learning (cs.LG), Artificial Intelligence (cs.AI), Signal Processing (eess.SP), FOS: Computer and information sciences, FOS: Computer and information sciences, FOS: Electrical engineering, electronic engineering, information engineering, FOS: Electrical engineering, electronic engineering, information engineering},
+  
+  title = {Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial},
+  
+  publisher = {arXiv},
+  
+  year = {2022},
+  
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+
+
+@article{yang2022,
+  title={Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial},
+  author={Yang, Jianfei and Chen, Xinyan and Wang, Dazhuo and Zou, Han and Lu, Chris Xiaoxuan and Sun, Sumei and Xie, Lihua},
+  year={2022},
+  publisher={arXiv}
+}
 ```
 
 ## Requirements
