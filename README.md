@@ -29,8 +29,8 @@ SenseFi is the first open-source benchmark and library for WiFi CSI human sensin
 @article{yang2022,
   title={Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial},
   author={Yang, Jianfei and Chen, Xinyan and Wang, Dazhuo and Zou, Han and Lu, Chris Xiaoxuan and Sun, Sumei and Xie, Lihua},
-  year={2022},
-  publisher={arXiv}
+  journal={arXiv preprint arXiv:2207.07859},
+  year={2022}
 }
 ```
 
