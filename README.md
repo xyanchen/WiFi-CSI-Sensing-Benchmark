@@ -22,7 +22,7 @@ SenseFi is the first open-source benchmark and library for WiFi CSI human sensin
 
 ## Run
 ### Download Processed Data
-Please download and organize the [processed datasets](https://drive.google.com/drive/folders/13qxmFQ-h8ei2m7EbBQOCxCHZJ_cDJGFY) in this structure:
+Please download and organize the [processed datasets](https://drive.google.com/drive/folders/13qxmFQ-h8ei2m7EbBQOCxCHZJ_cDJGFY?usp=sharing) in this structure:
 ```
 Benchmark
 ├── Data
