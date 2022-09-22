@@ -85,7 +85,7 @@ You can choose [model name] from the model list below
 Method: [*AutoFi: Towards Automatic WiFi Human Sensing via Geometric Self-Supervised Learning*](https://doi.org/10.48550/arXiv.2205.01629)  
 
 
-## Model
+## Model Zoo
 ### MLP
 - It consists of 3 fully-connected layers followed by activation functions 
 ### LeNet
@@ -112,7 +112,7 @@ Method: [*AutoFi: Towards Automatic WiFi Human Sensing via Geometric Self-Superv
 - **self.encoder** : It consists of 3 convolutional layers followed by activation functions
 - **self.gru** : A one-layer GRU structure with a hidden dimension of 64
 - **self.classifier** : It consistis a dropout layer followed by a fully-connected layer and an activation function
- ### ViT
+ ### ViT (Transformers)
 - ***class*** **PatchEmbedding** : Divide the 2D inputs into small pieces of equal size. Then concatenate each piece with cls_token and do positional encoding operation
 - ***class*** **ClassificationHead** : It consists of a layer-normalization layer followed by a fully-connected layer
 - ***class*** **TransformerEncoderBlock** : It consists of multi-head attention block, residual add block and feed forward block. The structure is shown below:  
