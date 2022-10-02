@@ -8,6 +8,7 @@ def train(model, tensor_loader, num_epochs, learning_rate, criterion, device):
     model = model.to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr = learning_rate)
     for epoch in range(num_epochs):
+        model.train()
         epoch_loss = 0
         epoch_accuracy = 0
         for data in tensor_loader:
@@ -34,6 +35,7 @@ def train(model, tensor_loader, num_epochs, learning_rate, criterion, device):
 
 
 def test(model, tensor_loader, criterion, device):
+    model.eval()
     test_acc = 0
     test_loss = 0
     for data in tensor_loader:
