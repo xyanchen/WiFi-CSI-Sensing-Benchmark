@@ -163,6 +163,7 @@ def main():
     #######################################
     # test
     def test():
+        model.eval()
         correct_1, correct_2 = 0, 0
         total = 0
         with torch.no_grad():
@@ -189,6 +190,7 @@ def main():
     for epoch in range(300):
         total_loss = 0
         for data in supervised_train_loader:
+            model.train()
             x, y = data
             x = Variable(x).to(device)
             y = y.type(torch.LongTensor)
