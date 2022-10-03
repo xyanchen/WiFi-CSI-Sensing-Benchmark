@@ -188,9 +188,9 @@ def main():
     ce_criterion = nn.CrossEntropyLoss()
 
     for epoch in range(300):
+        model.train()
         total_loss = 0
         for data in supervised_train_loader:
-            model.train()
             x, y = data
             x = Variable(x).to(device)
             y = y.type(torch.LongTensor)
