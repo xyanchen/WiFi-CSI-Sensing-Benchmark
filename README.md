@@ -39,6 +39,7 @@ Benchmark
     │   ├── test
     │   ├── train
 ```
+We also offer [pre-trained weights](https://drive.google.com/drive/folders/1LwNUG0tr_XmNZUWGyzKffOYNiWX1U7e7?usp=sharing) for all models.
 
 ### Supervised Learning
 To run models with supervised learning (train & test):  
