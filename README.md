@@ -164,6 +164,9 @@ Draw-2, Draw-3, Draw-4, Draw-5, Draw-6, Draw-7, Draw-8, Draw-9, Draw-10
 <img src="./img/Widar_classes.jpg" width="800"/>  
 
 
+#### Notice
+Please download and unzip all the datasets with linux system in order to avoid decoding errors.
+
 ## Datasets Reference
 ```
 @article{yousefi2017survey,
