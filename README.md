@@ -22,7 +22,7 @@ SenseFi is the first open-source benchmark and library for WiFi CSI human sensin
 
 ## Run
 ### Download Processed Data
-Please download and organize the [processed datasets](https://drive.google.com/drive/folders/13qxmFQ-h8ei2m7EbBQOCxCHZJ_cDJGFY?usp=sharing) in this structure:
+Please download and organize the [processed datasets](https://drive.google.com/drive/folders/1R0R8SlVbLI1iUFQCzh_mH90H_4CW2iwt?usp=sharing) in this structure:
 ```
 Benchmark
 ├── Data
@@ -39,7 +39,7 @@ Benchmark
     │   ├── test
     │   ├── train
 ```
-We also offer [pre-trained weights](https://drive.google.com/drive/folders/1LwNUG0tr_XmNZUWGyzKffOYNiWX1U7e7?usp=sharing) for all models
+We also offer [pre-trained weights](https://drive.google.com/drive/folders/1NBVe9za8ntFnkE9B1vhv4gD6eM88P1KI?usp=sharing) for all models
 
 ### Supervised Learning
 To run models with supervised learning (train & test):  
