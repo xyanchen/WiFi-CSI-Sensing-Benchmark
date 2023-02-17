@@ -4,7 +4,7 @@
 [![DOI](https://zenodo.org/badge/511110383.svg)](https://zenodo.org/badge/latestdoi/511110383)
 # SenseFi: A Benchmark for WiFi CSI Sensing
 ## Introduction
-SenseFi is the first open-source benchmark and library for WiFi CSI human sensing, implemented by PyTorch. The state-of-the-art networks, including MLP, CNN, RNN, Transformers, etc, are evaluated on four public datasets across different WiFi CSI platforms. The details are illustrated in our paper [*Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial*](https://arxiv.org/abs/2207.07859).
+SenseFi is the first open-source benchmark and library for WiFi CSI human sensing, implemented by PyTorch. The state-of-the-art networks, including MLP, CNN, RNN, Transformers, etc, are evaluated on four public datasets across different WiFi CSI platforms. The details are illustrated in our paper [*Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial*](https://arxiv.org/abs/2207.07859) that has been accepted by Patterns, Cell Press.
 
 ```
 @article{yang2022benchmark,
