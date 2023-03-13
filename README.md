@@ -42,6 +42,9 @@ Benchmark
 ```
 We also offer [pre-trained weights](https://drive.google.com/drive/folders/1NBVe9za8ntFnkE9B1vhv4gD6eM88P1KI?usp=sharing) for all models
 
+
+*If you plan to use Windows to run the codes, you need to modify the all the '/' to '\\' for dataloader.*
+
 ### Supervised Learning
 To run models with supervised learning (train & test):  
 Run: `python run.py --model [model name] --dataset [dataset name]`  
