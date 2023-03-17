@@ -20,6 +20,8 @@ SenseFi is the first open-source benchmark and library for WiFi CSI human sensin
 
 ## Requirements
 
+*The whole project is run in Linux (Ubuntu). If you plan to use Windows to run the codes, you need to modify the all the '/' to '\\' for the dataloader.*
+
 1. Install `pytorch` and `torchvision` (we use `pytorch==1.12.0` and `torchvision==0.13.0`).
 2. `pip install -r requirements.txt`
 
@@ -44,8 +46,6 @@ Benchmark
 ```
 We also offer [pre-trained weights](https://drive.google.com/drive/folders/1NBVe9za8ntFnkE9B1vhv4gD6eM88P1KI?usp=sharing) for all models
 
-
-*If you plan to use Windows to run the codes, you need to modify the all the '/' to '\\' for dataloader.*
 
 ### Supervised Learning
 To run models with supervised learning (train & test):  
