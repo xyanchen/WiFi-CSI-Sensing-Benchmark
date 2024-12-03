@@ -24,6 +24,7 @@ def UT_HAR_dataset(root_dir):
     return WiFi_data
 
 
+
 # dataset: /class_name/xx.mat
 class CSI_Dataset(Dataset):
     """CSI dataset."""
