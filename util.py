@@ -15,11 +15,12 @@ def load_data_n_model(dataset_name, model_name, root):
         print('using dataset: UT-HAR DATA')
         num_classes = classes['UT_HAR_data']
         data = UT_HAR_dataset(root)
-        # train_set = torch.utils.data.TensorDataset(data['X_train'],data['y_train'])
-        # test_set = torch.utils.data.TensorDataset(torch.cat((data['X_val'],data['X_test']),0),torch.cat((data['y_val'],data['y_test']),0))
-
-        train_set = torch.utils.data.TensorDataset(data['X_train'].sum(dim=2),data['y_train'])
-        test_set = torch.utils.data.TensorDataset(torch.cat((data['X_val'],data['X_test']),0).sum(dim=2),torch.cat((data['y_val'],data['y_test']),0))
+        if model_name != 'oneD_lw_ResNet18' and model_name != 'oneD_lw_ResNet50':
+            train_set = torch.utils.data.TensorDataset(data['X_train'],data['y_train'])
+            test_set = torch.utils.data.TensorDataset(torch.cat((data['X_val'],data['X_test']),0),torch.cat((data['y_val'],data['y_test']),0))
+        else:
+            train_set = torch.utils.data.TensorDataset(data['X_train'].sum(dim=2),data['y_train'])
+            test_set = torch.utils.data.TensorDataset(torch.cat((data['X_val'],data['X_test']),0).sum(dim=2),torch.cat((data['y_val'],data['y_test']),0))
         
         train_loader = torch.utils.data.DataLoader(train_set,batch_size=64,shuffle=True, drop_last=True) # drop_last=True
         test_loader = torch.utils.data.DataLoader(test_set,batch_size=256,shuffle=False)
@@ -86,11 +87,12 @@ def load_data_n_model(dataset_name, model_name, root):
     elif dataset_name == 'NTU-Fi-HumanID':
         print('using dataset: NTU-Fi-HumanID')
         num_classes = classes['NTU-Fi-HumanID']
-        # train_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi-HumanID/test_amp/'), batch_size=64, shuffle=True)
-        # test_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi-HumanID/train_amp/'), batch_size=64, shuffle=False)
-
-        train_loader = torch.utils.data.DataLoader(dataset=My_CSI_Dataset(root + 'NTU-Fi-HumanID/test_amp/'), batch_size=64, shuffle=True)
-        test_loader = torch.utils.data.DataLoader(dataset=My_CSI_Dataset(root + 'NTU-Fi-HumanID/train_amp/'), batch_size=64, shuffle=False)
+        if model_name != 'oneD_lw_ResNet18' and model_name != 'oneD_lw_ResNet50':
+            train_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi-HumanID/test_amp/'), batch_size=64, shuffle=True)
+            test_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi-HumanID/train_amp/'), batch_size=64, shuffle=False)
+        else:
+            train_loader = torch.utils.data.DataLoader(dataset=My_CSI_Dataset(root + 'NTU-Fi-HumanID/test_amp/'), batch_size=64, shuffle=True)
+            test_loader = torch.utils.data.DataLoader(dataset=My_CSI_Dataset(root + 'NTU-Fi-HumanID/train_amp/'), batch_size=64, shuffle=False)
 
         # 读取所有图像文件路径和标签
         labels = []
@@ -157,11 +159,13 @@ def load_data_n_model(dataset_name, model_name, root):
     elif dataset_name == 'NTU-Fi_HAR':
         print('using dataset: NTU-Fi_HAR')
         num_classes = classes['NTU-Fi_HAR']
-        train_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi_HAR/train_amp/'), batch_size=64, shuffle=True)
-        test_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi_HAR/test_amp/'), batch_size=64, shuffle=False)
 
-        # train_loader = torch.utils.data.DataLoader(dataset=My_CSI_Dataset(root + 'NTU-Fi_HAR/test_amp/'), batch_size=64, shuffle=True)
-        # test_loader = torch.utils.data.DataLoader(dataset=My_CSI_Dataset(root + 'NTU-Fi_HAR/train_amp/'), batch_size=64, shuffle=False)
+        if model_name != 'oneD_lw_ResNet18' and model_name != 'oneD_lw_ResNet50':
+            train_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi_HAR/train_amp/'), batch_size=64, shuffle=True)
+            test_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi_HAR/test_amp/'), batch_size=64, shuffle=False)
+        else:
+            train_loader = torch.utils.data.DataLoader(dataset=My_CSI_Dataset(root + 'NTU-Fi_HAR/test_amp/'), batch_size=64, shuffle=True)
+            test_loader = torch.utils.data.DataLoader(dataset=My_CSI_Dataset(root + 'NTU-Fi_HAR/train_amp/'), batch_size=64, shuffle=False)
         
         # 读取所有图像文件路径和标签
         labels = []

@@ -139,11 +139,11 @@ def main():
         os.makedirs(folder)
     print('The folder is {}'.format(folder))
 
-    summary(model,input_size=(3,114,500))
-    inputs = torch.randn(1, 3, 114,500).to(device)
-    flops, params = profile(model, (inputs,))
-    print('flops: ', flops, 'params: ', params)
-    exit()
+    # summary(model,input_size=(3,114,500))
+    # inputs = torch.randn(1, 3, 114,500).to(device)
+    # flops, params = profile(model, (inputs,))
+    # print('flops: ', flops, 'params: ', params)
+    # exit()
 
     train(
         model=model,
