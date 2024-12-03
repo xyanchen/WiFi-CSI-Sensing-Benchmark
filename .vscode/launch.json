@@ -12,8 +12,8 @@
             "console": "integratedTerminal",
 
             "args": [
-                "--dataset", "UT_HAR_data",
-                "--model", "oneD_lw_ResNet18"
+                "--dataset", "NTU-Fi-HumanID",
+                "--model", "ResNet18"
             ],
             "env": {
                 "PYTHONUNBUFFERED": "1"
