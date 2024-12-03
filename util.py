@@ -4,16 +4,28 @@ from NTU_Fi_model import *
 from widar_model import *
 from self_supervised_model import *
 import torch
+from mymodel import *
+from mymodel_UT import *
+
+import os
 
 def load_data_n_model(dataset_name, model_name, root):
     classes = {'UT_HAR_data':7,'NTU-Fi-HumanID':14,'NTU-Fi_HAR':6,'Widar':22}
     if dataset_name == 'UT_HAR_data':
         print('using dataset: UT-HAR DATA')
+        num_classes = classes['UT_HAR_data']
         data = UT_HAR_dataset(root)
-        train_set = torch.utils.data.TensorDataset(data['X_train'],data['y_train'])
-        test_set = torch.utils.data.TensorDataset(torch.cat((data['X_val'],data['X_test']),0),torch.cat((data['y_val'],data['y_test']),0))
+        # train_set = torch.utils.data.TensorDataset(data['X_train'],data['y_train'])
+        # test_set = torch.utils.data.TensorDataset(torch.cat((data['X_val'],data['X_test']),0),torch.cat((data['y_val'],data['y_test']),0))
+
+        train_set = torch.utils.data.TensorDataset(data['X_train'].sum(dim=2),data['y_train'])
+        test_set = torch.utils.data.TensorDataset(torch.cat((data['X_val'],data['X_test']),0).sum(dim=2),torch.cat((data['y_val'],data['y_test']),0))
+        
         train_loader = torch.utils.data.DataLoader(train_set,batch_size=64,shuffle=True, drop_last=True) # drop_last=True
         test_loader = torch.utils.data.DataLoader(test_set,batch_size=256,shuffle=False)
+
+        labels = ['lie down', 'fall', 'walk', 'pickup', 'run', 'sit down', 'stand up']
+
         if model_name == 'MLP':
             print("using model: MLP")
             model = UT_HAR_MLP()
@@ -26,10 +38,20 @@ def load_data_n_model(dataset_name, model_name, root):
             print("using model: ResNet18")
             model = UT_HAR_ResNet18()
             train_epoch = 200 #70
+        elif model_name == 'oneD_lw_ResNet18':
+            print("using model: oneD_lw_ResNet18")
+            model = UT_HAR_oneD_lw_ResNet18()
+            train_epoch = 200 #70
+
         elif model_name == 'ResNet50':
             print("using model: ResNet50")
             model = UT_HAR_ResNet50()
             train_epoch = 200 #100
+        elif model_name == 'oneD_lw_ResNet50':
+            print("using model: oneD_lw_ResNet50")
+            model = UT_HAR_oneD_lw_ResNet50()
+            train_epoch = 200
+
         elif model_name == 'ResNet101':
             print("using model: ResNet101")
             model = UT_HAR_ResNet101()
@@ -58,14 +80,23 @@ def load_data_n_model(dataset_name, model_name, root):
             print("using model: ViT")
             model = UT_HAR_ViT()
             train_epoch = 200 #100
-        return train_loader, test_loader, model, train_epoch
+        return train_loader, test_loader, model, train_epoch, num_classes, labels
     
     
     elif dataset_name == 'NTU-Fi-HumanID':
         print('using dataset: NTU-Fi-HumanID')
         num_classes = classes['NTU-Fi-HumanID']
-        train_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi-HumanID/test_amp/'), batch_size=64, shuffle=True)
-        test_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi-HumanID/train_amp/'), batch_size=64, shuffle=False)
+        # train_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi-HumanID/test_amp/'), batch_size=64, shuffle=True)
+        # test_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi-HumanID/train_amp/'), batch_size=64, shuffle=False)
+
+        train_loader = torch.utils.data.DataLoader(dataset=My_CSI_Dataset(root + 'NTU-Fi-HumanID/test_amp/'), batch_size=64, shuffle=True)
+        test_loader = torch.utils.data.DataLoader(dataset=My_CSI_Dataset(root + 'NTU-Fi-HumanID/train_amp/'), batch_size=64, shuffle=False)
+
+        # 读取所有图像文件路径和标签
+        labels = []
+        for label_folder in sorted(os.listdir(root + 'NTU-Fi-HumanID/test_amp/')):
+            labels.append(label_folder)
+
         if model_name == 'MLP':
             print("using model: MLP")
             model = NTU_Fi_MLP(num_classes)
@@ -78,10 +109,20 @@ def load_data_n_model(dataset_name, model_name, root):
             print("using model: ResNet18")
             model = NTU_Fi_ResNet18(num_classes)
             train_epoch = 50 #30
+        elif model_name == 'oneD_lw_ResNet18':
+            print("using model: oneD_lw_ResNet18")
+            model = oneD_lw_ResNet18(num_classes)
+            train_epoch = 50 #30
+
         elif model_name == 'ResNet50':
             print("using model: ResNet50")
             model = NTU_Fi_ResNet50(num_classes)
             train_epoch = 50 #40
+        elif model_name == 'oneD_lw_ResNet50':
+            print("using model: oneD_lw_ResNet50")
+            model = oneD_lw_ResNet50(num_classes)
+            train_epoch = 50 #40
+
         elif model_name == 'ResNet101':
             print("using model: ResNet101")
             model = NTU_Fi_ResNet101(num_classes)
@@ -110,7 +151,7 @@ def load_data_n_model(dataset_name, model_name, root):
             print("using model: ViT")
             model = NTU_Fi_ViT(num_classes=num_classes)
             train_epoch = 50
-        return train_loader, test_loader, model, train_epoch
+        return train_loader, test_loader, model, train_epoch, num_classes, labels
     
     
     elif dataset_name == 'NTU-Fi_HAR':
@@ -118,6 +159,15 @@ def load_data_n_model(dataset_name, model_name, root):
         num_classes = classes['NTU-Fi_HAR']
         train_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi_HAR/train_amp/'), batch_size=64, shuffle=True)
         test_loader = torch.utils.data.DataLoader(dataset=CSI_Dataset(root + 'NTU-Fi_HAR/test_amp/'), batch_size=64, shuffle=False)
+
+        # train_loader = torch.utils.data.DataLoader(dataset=My_CSI_Dataset(root + 'NTU-Fi_HAR/test_amp/'), batch_size=64, shuffle=True)
+        # test_loader = torch.utils.data.DataLoader(dataset=My_CSI_Dataset(root + 'NTU-Fi_HAR/train_amp/'), batch_size=64, shuffle=False)
+        
+        # 读取所有图像文件路径和标签
+        labels = []
+        for label_folder in sorted(os.listdir(root + 'NTU-Fi_HAR/test_amp/')):
+            labels.append(label_folder)
+
         if model_name == 'MLP':
             print("using model: MLP")
             model = NTU_Fi_MLP(num_classes)
@@ -130,10 +180,20 @@ def load_data_n_model(dataset_name, model_name, root):
             print("using model: ResNet18")
             model = NTU_Fi_ResNet18(num_classes)
             train_epoch = 30
+        elif model_name == 'oneD_lw_ResNet18':
+            print("using model: oneD_lw_ResNet18")
+            model = oneD_lw_ResNet18(num_classes)
+            train_epoch = 30
+
         elif model_name == 'ResNet50':
             print("using model: ResNet50")
             model = NTU_Fi_ResNet50(num_classes)
             train_epoch = 30 #40
+        elif model_name == 'oneD_lw_ResNet50':
+            print("using model: oneD_lw_ResNet50")
+            model = oneD_lw_ResNet50(num_classes)
+            train_epoch = 50
+
         elif model_name == 'ResNet101':
             print("using model: ResNet101")
             model = NTU_Fi_ResNet101(num_classes)
@@ -162,7 +222,7 @@ def load_data_n_model(dataset_name, model_name, root):
             print("using model: ViT")
             model = NTU_Fi_ViT(num_classes=num_classes)
             train_epoch = 30
-        return train_loader, test_loader, model, train_epoch
+        return train_loader, test_loader, model, train_epoch, num_classes, labels
 
     elif dataset_name == 'Widar':
         print('using dataset: Widar')

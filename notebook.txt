@@ -1,0 +1,54 @@
+ResNet18:
+================================================================
+Total params: 11,184,218
+Trainable params: 11,184,218
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.65
+Forward/backward pass size (MB): 1.66
+Params size (MB): 42.66
+Estimated Total Size (MB): 44.98
+----------------------------------------------------------------
+flops:  54214828.0 params:  11184218.0
+
+
+oneD_lw_ResNet18:
+================================================================
+Total params: 134,894
+Trainable params: 134,894
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.00
+Forward/backward pass size (MB): 0.31
+Params size (MB): 0.51
+Estimated Total Size (MB): 0.83
+----------------------------------------------------------------
+flops:  271694.0 params:  134894.0
+
+
+ResNet50:
+================================================================
+Total params: 23,550,554
+Trainable params: 23,550,554
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.65
+Forward/backward pass size (MB): 5.99
+Params size (MB): 89.84
+Estimated Total Size (MB): 96.48
+----------------------------------------------------------------
+flops:  90671276.0 params:  23550554.0
+
+
+oneD_lw_ResNet50:
+================================================================
+Total params: 590,318
+Trainable params: 590,318
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.00
+Forward/backward pass size (MB): 1.58
+Params size (MB): 2.25
+Estimated Total Size (MB): 3.83
+----------------------------------------------------------------
+flops:  1063246.0 params:  590318.0
