@@ -54,37 +54,6 @@ def train(model, tensor_loader, num_epochs, learning_rate, criterion, device, fo
     torch.save(model.state_dict(), folder + '/model.pth')
     return
 
-
-# def test(model, tensor_loader, criterion, device, folder):
-#     print('Testing')
-#     model_path = folder + '/model.pth'
-#     assert os.path.exists(model_path), "cannot find {} file".format(model_path)
-#     model.load_state_dict(torch.load(model_path, map_location=device))
-
-#     model.to(device)
-#     model.eval()
-#     test_acc = 0
-#     test_loss = 0
-#     for data in tensor_loader:
-#         inputs, labels = data
-#         inputs = inputs.to(device)
-#         labels.to(device)
-#         labels = labels.type(torch.LongTensor)
-        
-#         outputs = model(inputs)
-#         outputs = outputs.type(torch.FloatTensor)
-#         outputs.to(device)
-        
-#         loss = criterion(outputs,labels)
-#         predict_y = torch.argmax(outputs,dim=1).to(device)
-#         accuracy = (predict_y == labels.to(device)).sum().item() / labels.size(0)
-#         test_acc += accuracy
-#         test_loss += loss.item() * inputs.size(0)
-#     test_acc = test_acc/len(tensor_loader)
-#     test_loss = test_loss/len(tensor_loader.dataset)
-#     print("validation accuracy:{:.4f}, loss:{:.5f}".format(float(test_acc),float(test_loss)))
-#     return
-
 def test(model, tensor_loader, criterion, device, folder, num_classes, labels):
     print('Testing')
     model_path = folder + '/model.pth'
